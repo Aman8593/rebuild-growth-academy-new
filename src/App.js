@@ -22,7 +22,7 @@ function App() {
               </div>
               <div className="data">
                 <p>Location</p>
-                <p>Address</p>
+                <p>Nagpur</p>
               </div>
             </div>
             <div className="navbar-contact">Cont</div>
