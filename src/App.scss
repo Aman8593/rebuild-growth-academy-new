@@ -20,9 +20,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 95vw;
+      width: 75vw;
       height: 84px;
       padding: 10px;
+      border-bottom: 1px solid #b9b1b1 ;
       // background-color: pink;
       .navbar-logo {
         display: flex;
@@ -44,16 +45,75 @@ body {
         }
       }
 
-      .navbar-more-info{
+      .navbar-more-info {
         display: flex;
         align-items: center;
-        gap: 10px;
-        .navbar-location{
+        gap: 20px;
+        .navbar-location {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 12px;
+          .icon {
+            font-size: 27px;
+            color: #4096FF ;
+          }
+          .data {
+            font-size: 16px;
+            &-content-1 {
+              font-weight: bold;
+            }
+            &-content-2 {
+              color: #222222;
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
+        }
+        .navbar-join-button{
+          button.ant-button.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid {
+            font-size: 14px;
+            height: 40px;
+            padding: 0px 15px;
+            border-radius: 6px;
+        }
         }
       }
+      
+    }
+
+    &-navlinks {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      width: 75vw ;
+      margin: 15px auto;
+      padding: 10px 0; 
+      justify-content: flex-start;
+      li {
+        list-style: none;
+        
+        font-size: 22px;
+        // font-family: "Roboto", sans-serif;
+        font-weight: 800;
+        // color: black;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          color: black;
+          &:hover {
+            color: #0f39d3; // Change color on hover
+          }
+        }
+      }
+    }
+    &-homepg {
+      background-image: url(../public/banner-1.jpeg);
+      // height: 100%;
+      height: 450px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }
