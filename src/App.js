@@ -36,19 +36,258 @@ function App() {
               </div>
             </div>
             <div className="navbar-join-btn">
-              <Button type="primary" >Schedule Demo</Button>
+              <Button type="primary">Schedule Demo</Button>
             </div>
           </div>
         </div>
         <div className="main-pg-navlinks">
-          <li><a href=""> About Us</a></li>
-          <li><a href=""> Courses</a></li>
-          <li><a href=""> Services</a></li>
-          <li><a href=""> Blogs</a></li>
-          <li><a href=""> Contact Us</a></li>
+          <li>
+            <a href=""> About Us</a>
+          </li>
+          <li>
+            <a href=""> Courses</a>
+          </li>
+          <li>
+            <a href=""> Services</a>
+          </li>
+          <li>
+            <a href=""> Blogs</a>
+          </li>
+          <li>
+            <a href=""> Contact Us</a>
+          </li>
         </div>
         <div className="main-pg-homepg">
-          
+          <div className="homepg-content-wrap">
+            <p className="homepg-content">Trade Smart</p>
+            <h1>
+              Master the Art of Stock Market <br />
+              Trading & Investing
+            </h1>
+            <p className="homepg-bottom-content">
+              Step into the world of trading confidently—our stock market
+              courses are
+              <br /> designed to make you a market expert!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="element-widget-container">
+        <div className="element-widget-wrapper">
+          <div className="element-slider">
+            {/* Original Slides */}
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-6-150x80.png"
+                  alt="Logo 6"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-7-150x80.png"
+                  alt="Logo 7"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-8-150x80.png"
+                  alt="Logo 8"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-9-150x80.png"
+                  alt="Logo 9"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-10-150x80.png"
+                  alt="Logo 10"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-11-150x80.png"
+                  alt="Logo 11"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-150x80.png"
+                  alt="Logo"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo1-150x80.png"
+                  alt="Logo 1"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/1-150x80.png"
+                  alt="1"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/2-150x80.png"
+                  alt="2"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-3-150x80.png"
+                  alt="Logo 3"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-4-150x80.png"
+                  alt="Logo 4"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-5-150x80.png"
+                  alt="Logo 5"
+                />
+              </figure>
+            </div>
+
+            {/* Duplicate Slides */}
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-6-150x80.png"
+                  alt="Logo 6"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-7-150x80.png"
+                  alt="Logo 7"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-8-150x80.png"
+                  alt="Logo 8"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-9-150x80.png"
+                  alt="Logo 9"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-10-150x80.png"
+                  alt="Logo 10"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-11-150x80.png"
+                  alt="Logo 11"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-150x80.png"
+                  alt="Logo"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo1-150x80.png"
+                  alt="Logo 1"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/1-150x80.png"
+                  alt="1"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/2-150x80.png"
+                  alt="2"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-3-150x80.png"
+                  alt="Logo 3"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-4-150x80.png"
+                  alt="Logo 4"
+                />
+              </figure>
+            </div>
+            <div className="swiper-slide-duplicate">
+              <figure className="swiper-slide-inner">
+                <img
+                  src="https://wealthnote.in/wp-content/uploads/2024/11/Logo-5-150x80.png"
+                  alt="Logo 5"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </div>
