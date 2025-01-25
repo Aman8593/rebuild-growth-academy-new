@@ -8,7 +8,6 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 .main-page {
-  
   .main-pg {
     &-container {
       height: 100%;
@@ -51,6 +50,13 @@ body {
         display: flex;
         align-items: center;
         gap: 20px;
+
+        // targeting classes in antd
+        .navbar-join-btn {
+          .ant-btn-variant-solid {
+            background-color: red;
+          }
+        }
         .navbar-location {
           display: flex;
           align-items: center;
@@ -69,14 +75,6 @@ body {
               font-size: 14px;
               font-weight: 400;
             }
-          }
-        }
-        .navbar-join-button {
-          button.ant-button.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid {
-            font-size: 14px;
-            height: 40px;
-            padding: 0px 15px;
-            border-radius: 6px;
           }
         }
       }
@@ -127,7 +125,7 @@ body {
           font-family: "Roboto", serif;
           color: rgb(225, 221, 221);
           font-size: 22px;
-          font-weight:400;
+          font-weight: 400;
           margin-bottom: 30px;
         }
         h1 {
@@ -142,7 +140,6 @@ body {
           font-size: 17px;
           padding-top: 90px;
         }
-        
       }
     }
   }
@@ -150,17 +147,17 @@ body {
   .element-widget-container {
     width: 100%;
     overflow: hidden; // Ensures the slider stays within the viewport
-  
+
     .element-widget-wrapper {
       display: flex;
       position: relative;
       width: 100%;
       overflow: hidden;
-  
+
       .element-slider {
         display: flex;
         animation: scroll 15s linear infinite; // Smooth continuous animation
-  
+
         .swiper-slide-duplicate {
           flex: 0 0 auto; // Each slide takes its own width
           width: 150px; // Match the width of the images
@@ -168,7 +165,7 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-  
+
           img {
             width: 100%;
             height: auto;
@@ -178,7 +175,7 @@ body {
       }
     }
   }
-  
+
   // Keyframe animation for infinite scrolling
   @keyframes scroll {
     0% {
@@ -188,7 +185,4 @@ body {
       transform: translateX(-50%); // Slide to the left by half the total width
     }
   }
-  
-  
-  
 }
