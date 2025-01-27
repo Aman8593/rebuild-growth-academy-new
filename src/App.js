@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
 import { EnvironmentOutlined, PhoneOutlined } from "@ant-design/icons";
-import "./App.scss";
 import { Button } from "antd";
+import "./App.scss";
+import { services } from "./json/services-main-pg";
 
 function App() {
   return (
@@ -286,6 +287,39 @@ function App() {
                   alt="Logo 5"
                 />
               </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="main-pg-section-2">
+        <div className="section-2-container">
+          <div className="section-2-cont-1">
+            <h3>Transform Your Financial Future With Share Market Courses</h3>
+            <p>
+              Achieving financial growth through trading requires the right
+              knowledge and skills. Share market classes in Chinchwad. Pune
+              provide comprehensive training to help individuals understand
+              arket trends, investment strategies, and risk management
+              techniques. These share market classes are designed to cater to
+              beginners as well as experienced traders who want to enhance heir
+              expertise. With affordable and structured share market class fees.
+              these programs ensure that learning valuable trading concepts is
+              accessible to everyone. By gaining practical insights and expert
+              guidance, participants can confidently navigate the market and
+              work towards building wealth through informed trading decisions.
+            </p>
+          </div>
+          <div className="section-2-cont-2">
+            <div className="cont-2-card-container">
+              {services.map((data) => {
+                return (
+                  <div className="card-main-pg">
+                    <img src={data.image} alt="logo" />
+                    <p>{data.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
