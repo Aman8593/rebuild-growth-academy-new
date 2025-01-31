@@ -60,10 +60,10 @@ function App() {
         </div>
         <div className="main-pg-homepg">
           <div className="homepg-content-wrap">
-            <p className="homepg-content">Trade Smart</p>
+            <p className="homepg-content">Trade Wise with Risk Management</p>
             <h1>
-              Master the Art of Stock Market <br />
-              Trading & Investing
+            Invest Wisely, Trade Confidently:  <br />
+            Master the Stock Market
             </h1>
             <p className="homepg-bottom-content">
               Step into the world of trading confidently—our stock market
