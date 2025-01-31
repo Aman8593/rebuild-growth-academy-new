@@ -72,11 +72,9 @@ body {
           }
         }
         .navbar-join-button {
-          button.ant-button.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid {
-            font-size: 14px;
-            height: 40px;
-            padding: 0px 15px;
-            border-radius: 6px;
+          .ant-btn-variant-solid {
+            
+            background-color: red;
           }
         }
       }
@@ -188,7 +186,4 @@ body {
       transform: translateX(-50%); // Slide to the left by half the total width
     }
   }
-  
-  
-  
 }
