@@ -225,8 +225,79 @@ body {
         }
       }
     }
-    .navlinks-hamburger-container{
-      background-color: pink;
+
+    &-section-3 {
+      .section-3-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        .sect-3-heading {
+          color: red;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        .sect-3-title {
+          text-align: center;
+          // width: 70%;
+          h2 {
+            color: #0f39d3;
+            margin-bottom: 10px;
+          }
+          p {
+            margin-bottom: 10px;
+          }
+        }
+        .sect-3-cards-wrapper {
+          margin-top: 20px;
+          .sect-3-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .ant-card {
+              background-color: rgb(253, 250, 225);
+              border-radius: 10px;
+              .ant-card-head {
+                padding: 0;
+                border-bottom: 0;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                img {
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              .ant-card-body {
+                .card-person-details {
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  p {
+                    font-size: 14px;
+                    font-weight: 500;
+                  }
+                }
+                .card-course-heading {
+                  font-size: 16px;
+                  font-weight: 600;
+                  margin-top: 10px;
+                }
+                .card-course-details {
+                  font-weight: 500;
+                  margin-top: 10px;
+                }
+                .card-footer {
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   .element-widget-container {
@@ -271,13 +342,13 @@ body {
     }
   }
 
-  .navlinks-hamburger-menu{
+  .navlinks-hamburger-menu {
     background-color: pink;
   }
 }
 
-.navlinks-hamburger-menu{
-  .navlinks-hamburger-container{
+.navlinks-hamburger-menu {
+  .navlinks-hamburger-container {
     li {
       list-style: none;
       font-size: 18px;
@@ -289,7 +360,6 @@ body {
     }
   }
 }
-
 
 /* Responsive design */
 @media (max-width: 768px) {

@@ -3,8 +3,9 @@ import {
   EnvironmentOutlined,
   MenuOutlined,
   PhoneOutlined,
+  UsergroupAddOutlined,
 } from "@ant-design/icons";
-import { Button, Drawer, Menu } from "antd";
+import { Avatar, Button, Card, Drawer, Menu } from "antd";
 import "./App.scss";
 import { services } from "./json/services-main-pg";
 import { useState } from "react";
@@ -342,6 +343,47 @@ function App() {
         </div>
       </div>
 
+      <div className="main-pg-section-3">
+        <div className="section-3-container">
+          <div className="sect-3-heading">
+            <h4>Go at you own pace</h4>
+          </div>
+          <div className="sect-3-title">
+            <h2>Our Popular Courses</h2>
+            <p>
+              Explore all of our courses and pick your suitable ones to enroll
+              and start <br /> learning with us! We ensure that you will never
+              regret it!
+            </p>
+          </div>
+          <div className="sect-3-cards-wrapper">
+            <div className="sect-3-cards">
+              <Card
+                title={<img src="./course.jpg" alt="course image" />}
+                bordered={false}
+                style={{ width: 300 }}
+              >
+                <div className="card-person-details">
+                  <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+                  <p>Rameshwar Wadgaonkar</p>
+                </div>
+                <p className="card-course-heading">
+                  Trading With Data Science Program- Offline
+                </p>
+                <p className="card-course-details">
+                  You can attend our 3 days Money-Back Guarantee Class at just
+                  25,000. You can choose to continue classes or simply
+                </p>
+                <div className="card-footer">
+                  <UsergroupAddOutlined />
+                  <p>6000 Students</p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Drawer
         onClose={() => setVerticalMenuOpen(false)}
         open={verticalMenuOpen}
@@ -349,22 +391,22 @@ function App() {
         className="navlinks-hamburger-menu"
       >
         <ul className="navlinks-hamburger-container">
-            <li>
-              <a href=""> About Us</a>
-            </li>
-            <li>
-              <a href=""> Courses</a>
-            </li>
-            <li>
-              <a href=""> Services</a>
-            </li>
-            <li>
-              <a href=""> Blogs</a>
-            </li>
-            <li>
-              <a href=""> Contact Us</a>
-            </li>
-          </ul>
+          <li>
+            <a href=""> About Us</a>
+          </li>
+          <li>
+            <a href=""> Courses</a>
+          </li>
+          <li>
+            <a href=""> Services</a>
+          </li>
+          <li>
+            <a href=""> Blogs</a>
+          </li>
+          <li>
+            <a href=""> Contact Us</a>
+          </li>
+        </ul>
       </Drawer>
     </div>
   );
