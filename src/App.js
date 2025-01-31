@@ -1,10 +1,17 @@
 // import logo from './logo.svg';
-import { EnvironmentOutlined, PhoneOutlined } from "@ant-design/icons";
-import { Button } from "antd";
+import {
+  EnvironmentOutlined,
+  MenuOutlined,
+  PhoneOutlined,
+} from "@ant-design/icons";
+import { Button, Drawer, Menu } from "antd";
 import "./App.scss";
 import { services } from "./json/services-main-pg";
+import { useState } from "react";
 
 function App() {
+  const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
+
   return (
     <div className="main-page">
       <div className="main-pg-container">
@@ -42,28 +49,38 @@ function App() {
           </div>
         </div>
         <div className="main-pg-navlinks">
-          <li>
-            <a href=""> About Us</a>
-          </li>
-          <li>
-            <a href=""> Courses</a>
-          </li>
-          <li>
-            <a href=""> Services</a>
-          </li>
-          <li>
-            <a href=""> Blogs</a>
-          </li>
-          <li>
-            <a href=""> Contact Us</a>
-          </li>
+          <div className="navlinks-container">
+            <li>
+              <a href=""> About Us</a>
+            </li>
+            <li>
+              <a href=""> Courses</a>
+            </li>
+            <li>
+              <a href=""> Services</a>
+            </li>
+            <li>
+              <a href=""> Blogs</a>
+            </li>
+            <li>
+              <a href=""> Contact Us</a>
+            </li>
+          </div>
+          <div className="navlinks-hamburger">
+            <Button
+              icon={<MenuOutlined style={{ fontSize: "20px" }} />}
+              type="text"
+              htmlType="button"
+              onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
+            />
+          </div>
         </div>
         <div className="main-pg-homepg">
           <div className="homepg-content-wrap">
             <p className="homepg-content">Trade Wise with Risk Management</p>
             <h1>
-            Invest Wisely, Trade Confidently:  <br />
-            Master the Stock Market
+              Invest Wisely, Trade Confidently: <br />
+              Master the Stock Market
             </h1>
             <p className="homepg-bottom-content">
               Step into the world of trading confidently—our stock market
@@ -324,6 +341,31 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Drawer
+        onClose={() => setVerticalMenuOpen(false)}
+        open={verticalMenuOpen}
+        placement="left"
+        className="navlinks-hamburger-menu"
+      >
+        <ul className="navlinks-hamburger-container">
+            <li>
+              <a href=""> About Us</a>
+            </li>
+            <li>
+              <a href=""> Courses</a>
+            </li>
+            <li>
+              <a href=""> Services</a>
+            </li>
+            <li>
+              <a href=""> Blogs</a>
+            </li>
+            <li>
+              <a href=""> Contact Us</a>
+            </li>
+          </ul>
+      </Drawer>
     </div>
   );
 }
