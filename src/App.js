@@ -9,6 +9,7 @@ import { Avatar, Button, Card, Drawer, Menu } from "antd";
 import "./App.scss";
 import { services } from "./json/services-main-pg";
 import { useState } from "react";
+import { courseDetailsCards } from "./json/course-details-cards";
 
 function App() {
   const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
@@ -358,27 +359,26 @@ function App() {
           </div>
           <div className="sect-3-cards-wrapper">
             <div className="sect-3-cards">
-              <Card
-                title={<img src="./course.jpg" alt="course image" />}
-                bordered={false}
-                style={{ width: 300 }}
-              >
-                <div className="card-person-details">
-                  <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-                  <p>Rameshwar Wadgaonkar</p>
-                </div>
-                <p className="card-course-heading">
-                  Trading With Data Science Program- Offline
-                </p>
-                <p className="card-course-details">
-                  You can attend our 3 days Money-Back Guarantee Class at just
-                  25,000. You can choose to continue classes or simply
-                </p>
-                <div className="card-footer">
-                  <UsergroupAddOutlined />
-                  <p>6000 Students</p>
-                </div>
-              </Card>
+              {courseDetailsCards.map((data) => {
+                return (
+                  <Card
+                    title={<img src={data?.imagePath} alt="course image" />}
+                    bordered={false}
+                    style={{ width: 300 }}
+                  >
+                    <div className="card-person-details">
+                      <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+                      <p>{data?.name}</p>
+                    </div>
+                    <p className="card-course-heading">{data?.heading}</p>
+                    <p className="card-course-details">{data?.title}</p>
+                    <div className="card-footer">
+                      <UsergroupAddOutlined />
+                      <p>{data?.students}</p>
+                    </div>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </div>

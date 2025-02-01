@@ -253,6 +253,8 @@ body {
           .sect-3-cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
             .ant-card {
               background-color: rgb(253, 250, 225);
               border-radius: 10px;
