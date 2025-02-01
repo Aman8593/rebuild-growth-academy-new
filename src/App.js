@@ -1,15 +1,17 @@
 // import logo from './logo.svg';
 import {
   EnvironmentOutlined,
+  MailOutlined,
   MenuOutlined,
   PhoneOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import { Avatar, Button, Card, Drawer, Menu } from "antd";
-import "./App.scss";
 import { services } from "./json/services-main-pg";
 import { useState } from "react";
 import { courseDetailsCards } from "./json/course-details-cards";
+import ContactUsFormComp from "./components/contactUsForm";
+import "./App.scss";
 
 function App() {
   const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
@@ -380,6 +382,43 @@ function App() {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="main-pg-section-4">
+        <div className="main-pg-section-4-container">
+          <div className="contact-us-form-img">
+            <div className="contact-us-img-txt">
+              <h2>Contact Us</h2>
+              <p>
+                Get in touch with us and we will get back to you as soon as
+                possible.
+              </p>
+              <div className="contact-us-img-txt-icon">
+                <span>
+                  <EnvironmentOutlined />
+                </span>
+                <strong>Address:</strong> Nagpur, Maharashtra, India
+              </div>
+              <div className="contact-us-img-txt-icon">
+                <span>
+                  <MailOutlined />
+                </span>
+                <strong>Email:</strong> ramwadgaonkarl@gmail.com /
+                amanwadgaonkar8593@gmail.com
+              </div>
+              <div className="contact-us-img-txt-icon">
+                <span>
+                  <PhoneOutlined />
+                </span>
+                <strong>Contact US:</strong> +91 9370980349
+              </div>
+            </div>
+          </div>
+          <div className="contact-us-form-container">
+            {/* import form component here */}
+            <ContactUsFormComp />
           </div>
         </div>
       </div>

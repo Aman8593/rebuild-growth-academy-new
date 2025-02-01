@@ -301,6 +301,53 @@ body {
         }
       }
     }
+
+    &-section-4 {
+      padding: 20px 20px;
+      &-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .contact-us-form-img {
+          width: 50%;
+          background-image: url("../public/contact-us-img.jpg");
+          .contact-us-img-txt {
+            color: white;
+            padding: 50px;
+            h2,
+            p {
+              z-index: 1;
+              margin-bottom: 20px;
+            }
+            h2 {
+              text-align: center;
+            }
+            &-icon {
+              display: flex;
+              gap: 10px;
+              padding: 0 40px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .contact-us-form-container {
+          .contact-us-form {
+            padding-left: 30px;
+            h3 {
+              margin-bottom: 20px;
+            }
+            .ant-form {
+              .ant-form-item {
+                .ant-row {
+                  align-items: flex-start;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .element-widget-container {
     width: 100%;
