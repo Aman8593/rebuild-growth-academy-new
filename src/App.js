@@ -369,14 +369,13 @@ function App() {
                     style={{ width: 300 }}
                   >
                     <div className="card-person-details">
-                      <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+                      
                       <p>{data?.name}</p>
                     </div>
                     <p className="card-course-heading">{data?.heading}</p>
                     <p className="card-course-details">{data?.title}</p>
                     <div className="card-footer">
-                      <UsergroupAddOutlined />
-                      <p>{data?.students}</p>
+                      {/* <UsergroupAddOutlined /> */}
                     </div>
                   </Card>
                 );

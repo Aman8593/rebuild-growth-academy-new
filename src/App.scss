@@ -253,7 +253,7 @@ body {
           .sect-3-cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            column-gap: 20px;
+            column-gap: 22px;
             row-gap: 20px;
             .ant-card {
               background-color: rgb(253, 250, 225);
@@ -276,8 +276,9 @@ body {
                   align-items: center;
                   gap: 8px;
                   p {
-                    font-size: 14px;
+                    font-size: 24px;
                     font-weight: 500;
+                    color: #ff0000;
                   }
                 }
                 .card-course-heading {
