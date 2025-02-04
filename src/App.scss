@@ -258,6 +258,7 @@ body {
             .ant-card {
               background-color: rgb(253, 250, 225);
               border-radius: 10px;
+              justify-content: space-between;
               .ant-card-head {
                 padding: 0;
                 border-bottom: 0;
@@ -271,6 +272,10 @@ body {
                 }
               }
               .ant-card-body {
+                display: flex;
+                flex-direction: column;
+                
+                gap: 5px;
                 .card-person-details {
                   display: flex;
                   align-items: center;
@@ -290,7 +295,7 @@ body {
                   font-weight: 500;
                   margin-top: 10px;
                 }
-                .card-footer {
+                .card-btn {
                   display: flex;
                   align-items: center;
                   gap: 8px;

@@ -12,6 +12,7 @@ import { useState } from "react";
 import { courseDetailsCards } from "./json/course-details-cards";
 import ContactUsFormComp from "./components/contactUsForm";
 import "./App.scss";
+import { homepgContent } from "./json/home-page-content";
 
 function App() {
   const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
@@ -81,16 +82,13 @@ function App() {
         </div>
         <div className="main-pg-homepg">
           <div className="homepg-content-wrap">
-            <p className="homepg-content">Trade Wise with Risk Management</p>
-            <h1>
-              Invest Wisely, Trade Confidently: <br />
-              Master the Stock Market
-            </h1>
-            <p className="homepg-bottom-content">
-              Step into the world of trading confidently—our stock market
-              courses are
-              <br /> designed to make you a market expert!
-            </p>
+            {homepgContent.map((item) => (
+              <div key={item.id} className="homepg-content">
+                <p className="homepg-content" >{item.title}</p>
+                <h1 dangerouslySetInnerHTML={{ __html: item.description }}></h1>
+                <p className="homepg-bottom-content" dangerouslySetInnerHTML={{ __html: item.footer }}></p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -369,13 +367,15 @@ function App() {
                     style={{ width: 300 }}
                   >
                     <div className="card-person-details">
-                      
                       <p>{data?.name}</p>
                     </div>
-                    <p className="card-course-heading">{data?.heading}</p>
-                    <p className="card-course-details">{data?.title}</p>
-                    <div className="card-footer">
-                      {/* <UsergroupAddOutlined /> */}
+                    <div>
+                      <p className="card-course-heading">{data?.heading}</p>
+                      <p className="card-course-details">{data?.title}</p>
+                    </div>
+
+                    <div className="card-btn">
+                      <Button type="primary">View More</Button>
                     </div>
                   </Card>
                 );
