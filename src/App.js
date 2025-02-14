@@ -12,87 +12,15 @@ import { useState } from "react";
 import { courseDetailsCards } from "./json/course-details-cards";
 import ContactUsFormComp from "./components/contactUsForm";
 import "./App.scss";
+import NavbarComp from "./components/navbar";
+import Section1Comp from "./components/section1";
 
 function App() {
-  const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
-
   return (
     <div className="main-page">
       <div className="main-pg-container">
-        <div className="main-pg-navbar">
-          <div className="navbar-logo">
-            <img src="/logo.png" alt="site logo" />
-            <div className="navbar-logo-name">
-              <h2>
-                Rebuild Growth <br /> Academy
-              </h2>
-            </div>
-          </div>
-          <div className="navbar-more-info">
-            <div className="navbar-location">
-              <div className="icon">
-                <EnvironmentOutlined height="50" />
-              </div>
-              <div className="data">
-                <p className="data-content-1">Location</p>
-                <p className="data-content-2">Nagpur</p>
-              </div>
-            </div>
-            <div className="navbar-location">
-              <div className="icon">
-                <PhoneOutlined height="50" />
-              </div>
-              <div className="data">
-                <p className="data-content-1">Contact</p>
-                <p className="data-content-2">+91-9370980349</p>
-              </div>
-            </div>
-            <div className="navbar-join-btn">
-              <Button type="primary">Schedule Demo</Button>
-            </div>
-          </div>
-        </div>
-        <div className="main-pg-navlinks">
-          <div className="navlinks-container">
-            <li>
-              <a href=""> About Us</a>
-            </li>
-            <li>
-              <a href=""> Courses</a>
-            </li>
-            <li>
-              <a href=""> Services</a>
-            </li>
-            <li>
-              <a href=""> Blogs</a>
-            </li>
-            <li>
-              <a href=""> Contact Us</a>
-            </li>
-          </div>
-          <div className="navlinks-hamburger">
-            <Button
-              icon={<MenuOutlined style={{ fontSize: "20px" }} />}
-              type="text"
-              htmlType="button"
-              onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
-            />
-          </div>
-        </div>
-        <div className="main-pg-homepg">
-          <div className="homepg-content-wrap">
-            <p className="homepg-content">Trade Wise with Risk Management</p>
-            <h1>
-              Invest Wisely, Trade Confidently: <br />
-              Master the Stock Market
-            </h1>
-            <p className="homepg-bottom-content">
-              Step into the world of trading confidently—our stock market
-              courses are
-              <br /> designed to make you a market expert!
-            </p>
-          </div>
-        </div>
+        <NavbarComp />
+        <Section1Comp />
       </div>
 
       <div className="element-widget-container">
@@ -422,31 +350,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      <Drawer
-        onClose={() => setVerticalMenuOpen(false)}
-        open={verticalMenuOpen}
-        placement="left"
-        className="navlinks-hamburger-menu"
-      >
-        <ul className="navlinks-hamburger-container">
-          <li>
-            <a href=""> About Us</a>
-          </li>
-          <li>
-            <a href=""> Courses</a>
-          </li>
-          <li>
-            <a href=""> Services</a>
-          </li>
-          <li>
-            <a href=""> Blogs</a>
-          </li>
-          <li>
-            <a href=""> Contact Us</a>
-          </li>
-        </ul>
-      </Drawer>
     </div>
   );
 }

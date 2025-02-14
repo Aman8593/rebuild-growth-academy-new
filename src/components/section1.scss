@@ -1,0 +1,30 @@
+.section-container {
+  background-image: url(../../public/banner-1.jpg);
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .section-wrapper {
+    display: flex;
+    width: 85vw;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 30px;
+    .section-heading {
+      font-size: 22px;
+      font-weight: 400;
+    //   margin-bottom: 30px;
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+      font-weight: bold;
+      color: white;
+    }
+    .section-para {
+      font-size: 18px;
+      color: white;
+    }
+  }
+}
