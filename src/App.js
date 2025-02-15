@@ -12,92 +12,15 @@ import { useState } from "react";
 import { courseDetailsCards } from "./json/course-details-cards";
 import ContactUsFormComp from "./components/contactUsForm";
 import "./App.scss";
-import { homepgContent } from "./json/home-page-content";
-import AboutUs from "./components/AboutUs";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NavbarComp from "./components/navbar";
+import Section1Comp from "./components/section1";
 
 function App() {
-  const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
-
   return (
     <div className="main-page">
       <div className="main-pg-container">
-        <div className="main-pg-navbar">
-          <div className="navbar-logo">
-            <img src="/logo.png" alt="site logo" />
-            <div className="navbar-logo-name">
-              <h2>
-                Rebuild Growth <br /> Academy
-              </h2>
-            </div>
-          </div>
-          <div className="navbar-more-info">
-            <div className="navbar-location">
-              <div className="icon">
-                <EnvironmentOutlined height="50" />
-              </div>
-              <div className="data">
-                <p className="data-content-1">Location</p>
-                <p className="data-content-2">Nagpur</p>
-              </div>
-            </div>
-            <div className="navbar-location">
-              <div className="icon">
-                <PhoneOutlined height="50" />
-              </div>
-              <div className="data">
-                <p className="data-content-1">Contact</p>
-                <p className="data-content-2">+91-9370980349</p>
-              </div>
-            </div>
-            <div className="navbar-join-btn">
-              <Button type="primary">Schedule Demo</Button>
-            </div>
-          </div>
-        </div>
-        <div className="main-pg-navlinks">
-            <div className="navlinks-container">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/">About Us</a>
-              </li>
-              <li>
-                <a href=""> Courses</a>
-              </li>
-              <li>
-                <a href=""> Services</a>
-              </li>
-              <li>
-                <a href=""> Contact Us</a>
-              </li>
-            </div>
-            <div className="navlinks-hamburger">
-              <Button
-                icon={<MenuOutlined style={{ fontSize: "20px" }} />}
-                type="text"
-                htmlType="button"
-                onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
-              />
-            </div>
-          </div>
-      
-
-        <div className="main-pg-homepg">
-          <div className="homepg-content-wrap">
-            {homepgContent.map((item) => (
-              <div key={item.id} className="homepg-content">
-                <p className="homepg-content">{item.title}</p>
-                <h1 dangerouslySetInnerHTML={{ __html: item.description }}></h1>
-                <p
-                  className="homepg-bottom-content"
-                  dangerouslySetInnerHTML={{ __html: item.footer }}
-                ></p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <NavbarComp />
+        <Section1Comp />
       </div>
 
       <div className="element-widget-container">
@@ -428,31 +351,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      <Drawer
-        onClose={() => setVerticalMenuOpen(false)}
-        open={verticalMenuOpen}
-        placement="left"
-        className="navlinks-hamburger-menu"
-      >
-        <ul className="navlinks-hamburger-container">
-          <li>
-            <a href=""> About Us</a>
-          </li>
-          <li>
-            <a href=""> Courses</a>
-          </li>
-          <li>
-            <a href=""> Services</a>
-          </li>
-          <li>
-            <a href=""> Blogs</a>
-          </li>
-          <li>
-            <a href=""> Contact Us</a>
-          </li>
-        </ul>
-      </Drawer>
     </div>
   );
 }

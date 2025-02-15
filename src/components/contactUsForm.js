@@ -3,7 +3,6 @@ import TextArea from "antd/es/input/TextArea";
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
-import "../App.scss"
 
 const ContactUsFormComp = () => {
   const [formData, setFormData] = useState({
@@ -23,9 +22,9 @@ const ContactUsFormComp = () => {
     toast.error("Failed to send message");
   };
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    console.log(name);
+  const handleChange = (name, value) => {
+    // const { name, value } = event.target;
+    console.log({ name, value });
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -84,7 +83,7 @@ const ContactUsFormComp = () => {
             placeholder="Enter your name."
             value={formData.name}
             type="text"
-            onChange={handleChange}
+            onChange={(e) => handleChange("name", e?.target?.value)}
           />
         </Form.Item>
         <Form.Item label="Email address" name="email" required>
@@ -92,7 +91,7 @@ const ContactUsFormComp = () => {
             placeholder="Enter your email."
             type="email"
             value={formData.email}
-            onChange={handleChange}
+            onChange={(e) => handleChange("email", e?.target?.value)}
           />
         </Form.Item>
         <Form.Item label="Phone Number" name="phone_no" required>
@@ -100,7 +99,7 @@ const ContactUsFormComp = () => {
             placeholder="Enter your phone number."
             type="number"
             value={formData.phone_no}
-            onChange={handleChange}
+            onChange={(e) => handleChange("phone_no", e?.target?.value)}
           />
         </Form.Item>
         <Form.Item label="Message" name="message" type="text">
@@ -108,7 +107,7 @@ const ContactUsFormComp = () => {
             placeholder="Maximum 200 characters allowed"
             maxLength={200}
             value={formData.message}
-            onChange={handleChange}
+            onChange={(e) => handleChange("message", e?.target?.value)}
           />
         </Form.Item>
         <Button htmlType="submit">{!loading ? "Submit" : "Sending"}</Button>
