@@ -3,7 +3,7 @@ import TextArea from "antd/es/input/TextArea";
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
-
+import "../App.scss"
 
 const ContactUsFormComp = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +25,7 @@ const ContactUsFormComp = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log(name);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,

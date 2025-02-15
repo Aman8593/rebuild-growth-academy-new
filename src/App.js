@@ -13,6 +13,8 @@ import { courseDetailsCards } from "./json/course-details-cards";
 import ContactUsFormComp from "./components/contactUsForm";
 import "./App.scss";
 import { homepgContent } from "./json/home-page-content";
+import AboutUs from "./components/AboutUs";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
@@ -54,39 +56,44 @@ function App() {
           </div>
         </div>
         <div className="main-pg-navlinks">
-          <div className="navlinks-container">
-            <li>
-              <a href=""> About Us</a>
-            </li>
-            <li>
-              <a href=""> Courses</a>
-            </li>
-            <li>
-              <a href=""> Services</a>
-            </li>
-            <li>
-              <a href=""> Blogs</a>
-            </li>
-            <li>
-              <a href=""> Contact Us</a>
-            </li>
+            <div className="navlinks-container">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/">About Us</a>
+              </li>
+              <li>
+                <a href=""> Courses</a>
+              </li>
+              <li>
+                <a href=""> Services</a>
+              </li>
+              <li>
+                <a href=""> Contact Us</a>
+              </li>
+            </div>
+            <div className="navlinks-hamburger">
+              <Button
+                icon={<MenuOutlined style={{ fontSize: "20px" }} />}
+                type="text"
+                htmlType="button"
+                onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
+              />
+            </div>
           </div>
-          <div className="navlinks-hamburger">
-            <Button
-              icon={<MenuOutlined style={{ fontSize: "20px" }} />}
-              type="text"
-              htmlType="button"
-              onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
-            />
-          </div>
-        </div>
+      
+
         <div className="main-pg-homepg">
           <div className="homepg-content-wrap">
             {homepgContent.map((item) => (
               <div key={item.id} className="homepg-content">
-                <p className="homepg-content" >{item.title}</p>
+                <p className="homepg-content">{item.title}</p>
                 <h1 dangerouslySetInnerHTML={{ __html: item.description }}></h1>
-                <p className="homepg-bottom-content" dangerouslySetInnerHTML={{ __html: item.footer }}></p>
+                <p
+                  className="homepg-bottom-content"
+                  dangerouslySetInnerHTML={{ __html: item.footer }}
+                ></p>
               </div>
             ))}
           </div>
@@ -317,16 +324,16 @@ function App() {
             <h3>Transform Your Financial Future With Share Market Courses</h3>
             <p>
               Achieving financial growth through trading requires the right
-              knowledge and skills. Share market classes in Chinchwad. Pune
-              provide comprehensive training to help individuals understand
-              arket trends, investment strategies, and risk management
-              techniques. These share market classes are designed to cater to
-              beginners as well as experienced traders who want to enhance heir
-              expertise. With affordable and structured share market class fees.
-              these programs ensure that learning valuable trading concepts is
-              accessible to everyone. By gaining practical insights and expert
-              guidance, participants can confidently navigate the market and
-              work towards building wealth through informed trading decisions.
+              knowledge and skills. Share market classes provide comprehensive
+              training to help individuals understand market trends, investment
+              strategies, and risk management techniques. These share market
+              classes are designed to cater to beginners as well as experienced
+              traders who want to enhance their expertise. With affordable and
+              structured share market class fees, these programs ensure that
+              learning valuable trading concepts is accessible to everyone. By
+              gaining practical insights and expert guidance, participants can
+              confidently navigate the market and work towards building wealth
+              through informed trading decisions.
             </p>
           </div>
           <div className="section-2-cont-2">
